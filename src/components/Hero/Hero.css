@@ -1,0 +1,246 @@
+.hero-section {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: -2;
+}
+
+/* hero content */
+.hero-content {
+  text-align: center;
+  padding: 0 40px;
+  max-width: 900px;
+  animation: heroEnter 1.2s ease-out;
+  z-index: 1;
+}
+
+/* load inn, skal jeg ha med det? */
+@keyframes heroEnter {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* hero title */
+.hero-title {
+  font-size: 84px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  background: linear-gradient(135deg, var(--light) 0%, var(--gray) 100%);
+  background-clip: text;
+  color: transparent;
+  /* text-transform: uppercase; */
+}
+
+/* "o" in World */
+/* .hero-earth {
+  position: relative;
+  display: inline-block;
+  margin-inline: 0.1ch;
+  color: transparent;
+  width: 0.9ch;
+} */
+
+/* .hero-earth::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "🌍";
+  font-size: 0.85em;
+  animation: rotateEarth 20s linear infinite;
+} */
+
+/* @keyframes rotateEarth {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(360deg);
+  }
+} */
+
+/* hero subtitle */
+.hero-subtitle {
+  font-size: 22px;
+  line-height: 1.6;
+  color: var(--light);
+  margin-bottom: 3rem;
+  font-weight: 300;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-subtitle-underscore {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 49% {
+    visibility: hidden;
+  }
+  50%, 100% {
+    visibility: visible;
+  }
+}
+
+/* buttons */
+.hero-button,
+.hero-button-outline {
+  padding: 18px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+}
+
+/* project button */
+.hero-button {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: var(--light);
+  box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+}
+
+/* shine effect on hover */
+.hero-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.hero-button:hover::before {
+  left: 100%;
+}
+
+/* contack button */
+.hero-button-outline {
+  background: transparent;
+  color: var(--light);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.hero-button-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--primary);
+  box-shadow: 0 10px 30px rgba(255, 107, 53, 0.2);
+}
+
+
+
+
+/* image */
+.hero-image {
+  position: relative;
+}
+
+/* image container */
+.profile-picture {
+  width: 80%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 1.2rem;
+  position: relative;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* shaddow behind image */
+.hero-image::before {
+  content: '';
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border-radius: 1.2rem;
+  top: 20px;
+  left: 20px;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+/* floating circle */
+.hero-image::after {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  border-radius: 50%;
+  top: -30px;
+  right: 90px;
+  opacity: 0.7;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-10px, 10px);
+  }
+}
+
+
+/* responsive */
+/* @media (max-width: 768px) {
+  .hero-title {
+    font-size: 50px;
+  }
+  
+  .hero-subtitle {
+    font-size: 18px;
+    padding: 0 20px;
+  }
+  
+  .hero-content {
+    padding: 0 20px;
+  }
+  
+  .hero-button,
+  .hero-button-outline {
+    padding: 15px 30px;
+    font-size: 15px;
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    margin: 10px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 40px;
+    letter-spacing: -1px;
+  }
+  
+  .hero-subtitle {
+    font-size: 16px;
+  }
+  
+  .hero-earth::before {
+    font-size: 0.75em;
+  }
+} */

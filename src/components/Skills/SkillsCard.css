@@ -1,0 +1,142 @@
+.skills-card {
+  background: var(--light);
+  padding: 40px;
+  border-radius: 1.2rem;
+  border: 2px solid rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+/* category title */
+.skills-title h4 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: var(--dark);
+  letter-spacing: -0.5px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+/* underline title */
+.skills-title h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #FF6B35, #F7931E);
+  border-radius: 2px;
+}
+
+/* container for skill items in the card */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 1.2rem;
+}
+
+/* skill items */
+.skills-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  position: relative;
+  min-height: 5rem;
+}
+
+/* skill icons */
+.skills-item img {
+  width: 60px;
+  height: 60px;
+}
+
+/* hide icon on hover */
+.skills-item:hover img {
+  opacity: 0.2;
+}
+
+/* skill name text */
+.skills-item p {
+  font-size: 24px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--dark);
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.3s ease;
+  text-align: center;
+  width: 100%;
+  padding: 0 5px;
+}
+
+/* show text on hover */
+.skills-item:hover p {
+  opacity: 1;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .skills-card {
+    padding: 30px;
+  }
+  
+  .skills-title h4 {
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+  
+  .skills-card .skills-container {
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    gap: 20px;
+  }
+  
+  .skills-item {
+    min-height: 80px;
+    padding: 12px 8px;
+  }
+  
+  .skills-item img {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .skills-item p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-card {
+    padding: 25px;
+  }
+  
+  .skills-title h4 {
+    font-size: 20px;
+  }
+  
+  .skills-card .skills-container {
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 15px;
+  }
+  
+  .skills-item {
+    min-height: 70px;
+    padding: 10px 5px;
+  }
+  
+  .skills-item img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .skills-item p {
+    font-size: 12px;
+  }
+}

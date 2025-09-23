@@ -1,0 +1,162 @@
+.footer {
+  background: var(--dark);
+  padding: 3rem 1rem;
+  text-align: center;
+  /* border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  width: 92%;
+  margin: 0 auto;
+  position: relative; */
+}
+
+.footer-content {
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* title */
+.footer-title {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--light);
+  position: relative;
+}
+
+/* color line under title */
+.footer-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  border-radius: 2px;
+}
+
+/* footer text */
+.footer-text {
+  font-size: 20px;
+  color: var(--light);
+  line-height: 1.2;
+  max-width: 800px;
+}
+
+/* made by text */
+.footer-creator {
+  font-size: 16px;
+  color: var(--light);
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  width: 80%;
+}
+
+/* icons container */
+.flex-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* icon links */
+.flex-icons a {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* icon hover */
+.flex-icons a:hover {
+  background: var(--light);
+  box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+  border-color: var(--light);
+}
+
+/* icon images */
+.footer-icon {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) invert(1);
+  position: relative;
+}
+
+/* change icon color on hover */
+.flex-icons a:hover .footer-icon {
+  filter: brightness(0) saturate(100%) invert(41%) sepia(84%) saturate(1026%) hue-rotate(347deg) brightness(102%) contrast(101%);
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .footer {
+    padding: 100px 40px 60px;
+  }
+  
+  .footer-title {
+    font-size: 48px;
+  }
+  
+  .footer-text {
+    font-size: 18px;
+    padding: 0 20px;
+  }
+  
+  .flex-icons {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .flex-icons a {
+    width: 55px;
+    height: 55px;
+  }
+  
+  .footer-icon {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 80px 20px 50px;
+  }
+  
+  .footer-title {
+    font-size: 36px;
+    letter-spacing: -1px;
+  }
+  
+  .footer-text {
+    font-size: 16px;
+  }
+  
+  .flex-icons a {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .footer-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .footer-creator {
+    font-size: 12px;
+    margin-top: 30px;
+    padding-top: 30px;
+  }
+}
