@@ -1,0 +1,31 @@
+.project-card {
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 1.2rem;
+}
+
+.project-card:hover {
+    border: 2px solid var(--primary);
+    transition: all 0.5s ease;
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 1.2rem;
+    border-top-right-radius: 1.2rem;
+}
+
+.project-technologies {
+    list-style: none;
+    padding: 5px 0 5px 5px;
+}
+
+.project-link {
+    text-decoration: none;
+    color: var(--dark);
+}
+
+.project-link:hover {
+    color: var(--primary);
+}
