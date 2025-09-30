@@ -59,6 +59,12 @@
   }
 }
 
+@media (max-width: 890px) {
+  .about-section {
+    scroll-margin-top: 12rem;
+  }
+}
+
 @media (max-width: 768px) {
   .about-section {
     padding: 60px 30px;

@@ -19,7 +19,6 @@
   gap: 20px;
 }
 
-/* title */
 .footer-title {
   font-size: 48px;
   font-weight: 800;
@@ -39,7 +38,6 @@
   border-radius: 2px;
 }
 
-/* footer text */
 .footer-text {
   font-size: 20px;
   color: var(--light);
@@ -47,7 +45,6 @@
   max-width: 800px;
 }
 
-/* made by text */
 .footer-creator {
   font-size: 16px;
   color: var(--light);
@@ -57,39 +54,31 @@
   width: 80%;
 }
 
-/* icons container */
 .flex-icons {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
   margin-top: 20px;
 }
 
-/* icon links */
 .flex-icons a {
-  width: 80px;
-  height: 80px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 1.2rem;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  transition: 0.3s ease;
 }
 
-/* icon hover */
 .flex-icons a:hover {
-  background: var(--light);
   box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
-  border-color: var(--light);
+  transform: translateY(-2px);
 }
 
-/* icon images */
 .footer-icon {
-  width: 32px;
-  height: 32px;
+  width: 60px;
+  height: 60px;
   filter: brightness(0) invert(1);
   position: relative;
 }
@@ -116,17 +105,11 @@
   
   .flex-icons {
     flex-wrap: wrap;
-    gap: 15px;
-  }
-  
-  .flex-icons a {
-    width: 55px;
-    height: 55px;
   }
   
   .footer-icon {
-    width: 22px;
-    height: 22px;
+    width: 45px;
+    height: 45px;
   }
 }
 
@@ -144,14 +127,9 @@
     font-size: 16px;
   }
   
-  .flex-icons a {
-    width: 50px;
-    height: 50px;
-  }
-  
   .footer-icon {
-    width: 20px;
-    height: 20px;
+    width: 35px;
+    height: 35px;
   }
   
   .footer-creator {

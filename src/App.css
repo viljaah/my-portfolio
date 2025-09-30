@@ -4,20 +4,6 @@
     box-sizing: border-box;
 }
 
-:root {
-  /* colors */
-  --primary: #FF6B35;
-  --secondary: #F7931E;
-  --accent: #C75B5B;
-  --dark: #2c2b2b;
-  --light: #FFFFFF;
-  --gray: #8A8A8A;
-  --overlay: rgba(26, 26, 26, 0.7);
-
-  /* sizes */
-  --nav-height: 3.8rem;
-}
-
 @font-face {
   font-family: "Roboto Mono";
   src: url("./assets/fonts/roboto-mono.ttf");
@@ -29,9 +15,21 @@
 }
 
 body {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: var(--dark);
-  margin: 0;
-  /* font-family: sans-serif; */
+  background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
   font-family: "Roboto Mono", monospace;
+}
+
+:root {
+  /* colors */
+  --primary: #FF6B35;
+  --secondary: #F7931E;
+  --accent: #C75B5B;
+  --dark: #2c2b2b;
+  --light: #FFFFFF;
+  --gray: #8A8A8A;
+  --overlay: rgba(26, 26, 26, 0.7);
+
+  /* sizes */
+  --nav-height: 4.8rem;
+  --nav-scroll-height: 8.4rem;
 }
