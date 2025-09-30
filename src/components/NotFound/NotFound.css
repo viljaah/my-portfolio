@@ -1,0 +1,25 @@
+.not-found {
+  text-align: center;
+  margin: 10rem;
+}
+.not-found h1 {
+  font-size: 6rem;
+  color: var(--dark);
+}
+.not-found p {
+  font-size: 1.5rem;
+  color: var(--dark);
+}
+.not-found a {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 10px 20px;
+  background-color: var(--primary);
+  color: var(--light);
+  text-decoration: none;
+  border-radius: 0.6rem;
+  transition: background-color 0.3s;
+}
+.not-found a:hover {
+  background-color: var(--secondary);
+}

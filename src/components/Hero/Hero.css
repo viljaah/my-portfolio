@@ -6,15 +6,13 @@
   justify-content: center;
   overflow: hidden;
   z-index: -2;
+  animation: heroEnter 1.2s ease-out;
 }
 
-/* hero content */
 .hero-content {
   text-align: center;
   padding: 0 40px;
   max-width: 900px;
-  animation: heroEnter 1.2s ease-out;
-  z-index: 1;
 }
 
 /* load inn, skal jeg ha med det? */
@@ -29,12 +27,11 @@
   }
 }
 
-/* hero title */
 .hero-title {
   font-size: 84px;
   font-weight: 800;
   margin-bottom: 30px;
-  background: linear-gradient(135deg, var(--light) 0%, var(--gray) 100%);
+  background: linear-gradient(135deg, var(--dark) 0%, var(--gray) 50%);
   background-clip: text;
   color: transparent;
   /* text-transform: uppercase; */
@@ -75,7 +72,7 @@
 .hero-subtitle {
   font-size: 22px;
   line-height: 1.6;
-  color: var(--light);
+  color: var(--dark);
   margin-bottom: 3rem;
   font-weight: 300;
   max-width: 600px;
@@ -147,9 +144,6 @@
   border-color: var(--primary);
   box-shadow: 0 10px 30px rgba(255, 107, 53, 0.2);
 }
-
-
-
 
 /* image */
 .hero-image {

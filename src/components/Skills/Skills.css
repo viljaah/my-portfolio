@@ -38,6 +38,12 @@
   }
 }
 
+@media (max-width: 890px) {
+  .skills-section {
+    scroll-margin-top: var(--nav-scroll-height);
+  }
+}
+
 @media (max-width: 768px) {
   .skills-section {
     padding: 80px 40px;

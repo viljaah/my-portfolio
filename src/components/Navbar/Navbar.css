@@ -22,12 +22,51 @@ nav {
 }
 
 .nav-logo {
-    font-size: 28px;
-    font-weight: 800;
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
-    background-clip: text;
-    color: transparent;
-    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.logo-name {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--light);
+    line-height: 1;
+}
+
+.availability-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.status-indicator.available {
+    background-color: #00ff88;
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.8);
+}
+
+.status-indicator.unavailable {
+    background-color: #ff4444;
+    box-shadow: 0 0 10px rgba(255, 68, 68, 0.8);
+}
+
+.status-text {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--dark);
+}
+
+/* scrolled state adjustments */
+.navbar.scrolled .status-text {
+    color: var(--light);
 }
 
 .nav-menu {
@@ -43,7 +82,7 @@ nav {
 }
 
 .nav-link {
-    color: var(--light);
+    color: var(--dark);
     text-decoration: none;
     font-weight: 500;
     font-size: 16px;
@@ -72,7 +111,15 @@ nav {
     color: var(--primary);
 }
 
-/* @media (max-width: 768px) {
+.navbar.scrolled .nav-link {
+  color: var(--light);
+}
+
+.navbar.scrolled .nav-link:hover {
+  color: var(--primary);
+}
+
+@media (max-width: 890px) {
   .navbar {
     padding: 20px 30px;
   }
@@ -83,7 +130,7 @@ nav {
   
   .nav-container {
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
   }
   
   .nav-menu {
@@ -113,4 +160,4 @@ nav {
   .nav-link[target="_blank"] {
     padding: 6px 15px;
   }
-} */
+}

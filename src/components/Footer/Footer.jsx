@@ -14,13 +14,13 @@ function Footer() {
                 <a href="mailto:vilja.a.hen@gmail.com">
                     <img src={emailIcon} alt="E-mail icon" className="footer-icon" />
                 </a>
-                <a href="https://www.linkedin.com/" target="_blank">
+                <a href="https://www.linkedin.com/in/vilja-alexandra-henriksen-131274359/" target="_blank">
                     <img src={linkedinIcon} alt="LinkedIn icon" className="footer-icon" />
                 </a>
-                <a href="https://www.github.com/" target="_blank">
+                <a href="https://github.com/viljaah" target="_blank">
                     <img src={githubIcon} alt="Github icon" className="footer-icon" />
                 </a>
-                <a href="tel:+4722222222">
+                <a href="tel:+4790533823">
                     <img src={phoneIcon} alt="Phone icon" className="footer-icon" />
                 </a>
             </div>

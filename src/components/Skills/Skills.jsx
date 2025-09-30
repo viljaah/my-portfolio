@@ -34,7 +34,7 @@ function Skills() {
                 ]}
               />
             </div>
-            <div className="skills-items">
+            {/* <div className="skills-items">
               <SkillsCard 
                 title="Frontend" 
                 itemNames={['React', 'Sass']}
@@ -51,11 +51,20 @@ function Skills() {
                   nodeIcon, expressIcon
                 ]}
               />
+            </div> */}
+            <div className="skills-items">
+              <SkillsCard 
+                title="Frontend & Backend" 
+                itemNames={['React', 'Sass', 'Node.js', 'Express']}
+                item_images={[
+                  reactIcon, sassIcon, nodeIcon, expressIcon
+                ]}
+              />
             </div>
             <div className="skills-items">
               <SkillsCard 
                 title="Tools & Other" 
-                itemNames={['VS Code', 'Github', 'Terminal/ CLI', 'Git', 'Figma', 'Docker', 'MongoDB', 'PostgreSQL', 'MySQL']}
+                itemNames={['VS Code', 'Github', 'Terminal/ CLI', 'Git', 'Figma', 'Docker', 'MongoDB', 'Postgre SQL', 'MySQL']}
                 item_images={[
                   vscodeIcon, githubIcon, cliIcon, gitIcon, figmaIcon, dockerIcon, mongodbIcon, postgresqlIcon, mysqlIcon
                 ]}

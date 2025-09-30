@@ -3,6 +3,7 @@ import "./Navbar.css";
 
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isAvailable, setIsAvailable] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,9 +28,14 @@ function Navbar() {
   return (
     <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
       <div className="nav-container">
-        <div
-          className="nav-logo">
-          VH
+        <div className="nav-logo">
+          <div className="logo-name">Vilja Henriksen</div>
+          <div className="availability-status">
+            <span className={`status-indicator ${isAvailable ? 'available' : 'unavailable'}`}></span>
+            <span className="status-text">
+              {isAvailable ? 'Available For Work' : 'Not Available'}
+            </span>
+          </div>
         </div>
         <ul className="nav-menu">
           <li className="nav-item">

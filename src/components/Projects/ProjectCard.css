@@ -1,31 +1,155 @@
 .project-card {
-    border: 2px solid rgba(0, 0, 0, 0.1);
-    border-radius: 1.2rem;
+  background: var(--light);
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid transparent;
 }
 
 .project-card:hover {
-    border: 2px solid var(--primary);
-    transition: all 0.5s ease;
+  transform: translateY(-5px);
+  /* transform: scale(1.01); */
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.15);
+  border-color: var(--primary);
 }
 
 .project-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-top-left-radius: 1.2rem;
-    border-top-right-radius: 1.2rem;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  /* flex-grow: 1; */
+}
+
+.project-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+/* color line under title */
+.project-card-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  border-radius: 2px;
+}
+
+.project-card-description {
+  color: var(--gray);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  /* flex-grow: 1; */
 }
 
 .project-technologies {
-    list-style: none;
-    padding: 5px 0 5px 5px;
+  list-style: none;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
+.technology-item {
+  background-color: rgba(255, 107, 53, 0.08);
+  color: var(--dark);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid rgba(255, 107, 53, 0.2);
+  transition: 0.3s ease;
+  cursor: default;
+}
+
+/* .technology-item:hover {
+  background-color: rgba(255, 107, 53, 0.15);
+  border-color: var(--primary);
+  color: var(--primary);
+} */
+
 .project-link {
-    text-decoration: none;
-    color: var(--dark);
+  display: inline-block;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: var(--light);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  text-align: center;
+  transition: 0.3s ease;
+  position: relative;
+  /* overflow: hidden; */
 }
 
 .project-link:hover {
-    color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+}
+
+/* shine effect on button hover */
+.project-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.project-link:hover::before {
+  left: 100%;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .project-card-content {
+    padding: 1.25rem;
+  }
+  
+  .project-image {
+    height: 180px;
+  }
+  
+  .project-card-title {
+    font-size: 1.1rem;
+  }
+  
+  .project-card-description {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card-content {
+    padding: 1rem;
+  }
+  
+  .project-image {
+    height: 160px;
+  }
+  
+  .technology-item {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+  }
 }

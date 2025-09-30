@@ -1,0 +1,337 @@
+.project-detail {
+  min-height: 100vh;
+  padding-top: 1rem;
+}
+
+.project-detail-container {
+  max-width: 110rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 2rem;
+  transition: 0.3s ease;
+  padding-bottom: 1rem;
+  padding-left: 0.5rem;
+}
+
+.back-button:hover {
+  transform: translateX(-5px);
+}
+
+.back-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  filter: brightness(0) saturate(100%) invert(41%) sepia(84%) saturate(1026%) hue-rotate(347deg) brightness(102%) contrast(101%);
+}
+
+.project-detail-content {
+  background: var(--light);
+  border-radius: 1.2rem;
+  padding: 3rem 5rem 3rem 5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-detail-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project-detail-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--dark);
+  margin: 0;
+  position: relative;
+  padding-bottom: 1rem;
+  letter-spacing: -1px;
+}
+
+.project-detail-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  border-radius: 2px;
+}
+
+.project-detail-description {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--gray);
+  max-width: 70ch;
+}
+
+.project-detail-image-container {
+  width: 70%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+.project-detail-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.project-technologies-section h3,
+.project-contributors-section h3,
+.project-more-section h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin: 0 0 1rem 0;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.project-technologies-section h3::after,
+.project-contributors-section h3::after,
+.project-more-section h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  border-radius: 2px;
+}
+
+.project-detail-technologies {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  cursor: default;
+}
+
+.technology-tag {
+  background: rgba(255, 107, 53, 0.08);
+  color: var(--dark);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid rgba(255, 107, 53, 0.2);
+}
+
+.project-contributors {
+  list-style: none;
+}
+
+.project-contributors li a {
+  color: var(--dark);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0 0.5rem 0;
+  display: inline-block;
+  transition: 0.3s ease;
+}
+
+.project-contributors li a:hover {
+  transform: translateY(-2px);
+  color: var(--primary);
+  filter: brightness(0) saturate(100%) invert(41%) sepia(84%) saturate(1026%) hue-rotate(347deg) brightness(102%) contrast(101%);
+}
+
+.external-link-icon {
+  width: 16px;
+  height: 16px;
+  margin-left: 4px;
+}
+
+.project-links-section h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin: 0 0 1rem 0;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.project-links-section h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  border-radius: 2px;
+}
+
+.project-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.project-link-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.project-link-item:hover {
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.link-text {
+  font-size: 1rem;
+}
+
+.link-icon {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) saturate(100%);
+  transition: filter 0.3s ease;
+}
+
+.project-link-item:hover .link-icon {
+  filter: brightness(0) saturate(100%) invert(41%) sepia(84%) saturate(1026%) hue-rotate(347deg) brightness(102%) contrast(101%);
+}
+
+.project-more-section {
+  padding-top: 1rem;
+  /* border-top: 1px solid rgba(0, 0, 0, 0.1); */
+}
+
+.project-more-section p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--gray);
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .project-detail {
+    padding-top: 80px;
+  }
+  
+  .project-detail-container {
+    padding: 1.5rem;
+  }
+  
+  .project-detail-content {
+    padding: 2rem;
+  }
+  
+  .project-detail-title {
+    font-size: 2rem;
+  }
+  
+  .project-detail-description {
+    font-size: 1rem;
+  }
+  
+  .project-links {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-detail-container {
+    padding: 1rem;
+  }
+  
+  .project-detail-content {
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+  
+  .project-detail-title {
+    font-size: 1.75rem;
+  }
+  
+  .back-button {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+  
+  .technology-tag {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+
+/* More Details Section Styling */
+.project-more-details-section {
+  margin: 3rem 0;
+}
+
+.more-details-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.detail-card {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+/* Reverse layout for even cards (image right, text left) */
+.detail-card:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.detail-image-container {
+  flex: 0 0 45%;
+  max-width: 500px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.detail-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.detail-content {
+  flex: 1;
+  padding: 1rem 0;
+}
+
+.detail-title {
+  margin: 0 0 1.5rem 0;
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--dark);
+  letter-spacing: 0.5px;
+}
+
+.detail-description {
+  margin: 0;
+  line-height: 1.7;
+  color: var(--dark);
+  font-size: 1rem;
+  font-weight: 300;
+  max-width: 70ch;
+}

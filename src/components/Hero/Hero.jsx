@@ -1,13 +1,13 @@
 import "./Hero.css";
 
 function HeroSection() {
-  const scrollToSection = (e, targetId) => {
-    e.preventDefault();
-    const targetElement = document.getElementById(targetId);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  // const scrollToSection = (e, targetId) => {
+  //   e.preventDefault();
+  //   const targetElement = document.getElementById(targetId);
+  //   if (targetElement) {
+  //     targetElement.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // };
 
   return (
     <section id="home" className="hero-section">
