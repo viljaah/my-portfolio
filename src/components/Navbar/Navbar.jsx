@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 import "./Navbar.css";
+import linkedinIcon from "../../assets/icons/linked-in-icon.svg";
+import emailIcon from "../../assets/icons/mail-icon.svg";
+import githubIcon from "../../assets/icons/github-icon.svg";
 
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -38,14 +41,14 @@ function Navbar() {
           </div>
         </div>
         <ul className="nav-menu">
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <a
               href="#about"
               className="nav-link"
               onClick={(e) => scrollToSection(e, "about")}>
               About
             </a>
-          </li>
+          </li> */}
           <li className="nav-item">
             <a
               href="#skills"
@@ -62,20 +65,38 @@ function Navbar() {
               Projects
             </a>
           </li>
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <a
               href="#contact"
               className="nav-link"
               onClick={(e) => scrollToSection(e, "contact")}>
               Contact
             </a>
-          </li>
+          </li> */}
           <li className="nav-item">
             <a
-              href="https://drive.google.com/file/d/1mjRgmVI-pltxoylJbMXmQl_2O4_YMRz8/view?usp=sharing"
+              href="https://drive.google.com/file/d/1UqVOUyagGbeYU7E8eK0LMOZpdceGINM2/view?usp=sharing"
               target="_blank"
               className="nav-link">
               CV
+            </a>
+          </li>
+
+          <li className="nav-separator">|</li>
+
+          <li className="nav-item">
+            <a href="mailto:vilja.a.hen@gmail.com" className="nav-icon-link">
+                <img src={emailIcon} alt="E-mail icon" className="nav-icon" />
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="https://www.linkedin.com/in/vilja-alexandra-henriksen-131274359/" target="_blank" className="nav-icon-link">
+                <img src={linkedinIcon} alt="LinkedIn icon" className="nav-icon" />
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="https://github.com/viljaah" target="_blank" className="nav-icon-link">
+                <img src={githubIcon} alt="Github icon" className="nav-icon" />
             </a>
           </li>
         </ul>

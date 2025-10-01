@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import { useState } from "react";
 import { projectsData } from "../../data/projectsData";
 import NotFound from "../NotFound/NotFound";
 import githubIcon from "../../assets/icons/github-icon.svg";
@@ -10,13 +11,23 @@ import "./ProjectDetail.css";
 function ProjectDetail() {
   const { projectUrl } = useParams();
   const project = projectsData.find(p => p.projectUrl === projectUrl);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   if (!project) {
     return <NotFound />;
   }
 
+  const images = project.images || [project.imageUrl];
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
   return (
-    <div className="project-detail">
       <div className="project-detail-container">
         <Link to="/" className="back-button">
           <img src={arrowLeftIcon} alt="Back to home" className="back-icon" />
@@ -28,13 +39,34 @@ function ProjectDetail() {
             <h1 className="project-detail-title">{project.title}</h1>
             <p className="project-detail-description">{project.fullDescription}</p>
 
-          <div className="project-detail-image-container">
-            <img 
-              src={project.imageUrl} 
-              alt={`${project.title} image`} 
-              className="project-detail-image" 
-            />
-          </div>
+            <div className="project-detail-image-container">
+              {images.length > 1 && (
+                <button onClick={prevImage} className="carousel-button prev-button">
+                  ‹
+                </button>
+              )}
+              <img 
+                src={images[currentImageIndex]} 
+                alt={`${project.title} screenshot ${currentImageIndex + 1}`} 
+                className="project-detail-image" 
+              />
+              {images.length > 1 && (
+                <button onClick={nextImage} className="carousel-button next-button">
+                  ›
+                </button>
+              )}
+              {images.length > 1 && (
+                <div className="carousel-indicators">
+                  {images.map((_, index) => (
+                    <button
+                      key={index}
+                      className={`indicator ${index === currentImageIndex ? 'active' : ''}`}
+                      onClick={() => setCurrentImageIndex(index)}
+                    />
+                  ))}
+                </div>
+              )}
+            </div>
             
             <div className="project-technologies-section">
               <h3>Technologies Used</h3>
@@ -74,7 +106,7 @@ function ProjectDetail() {
                     <img src={globeIcon} alt="Live site" className="link-icon" />
                   </a>
                 )}
-                {project.liveUrl && (
+                {project.liveUrl ? (
                   <a 
                     href={project.liveUrl} 
                     target="_blank" 
@@ -83,36 +115,23 @@ function ProjectDetail() {
                     <span className="link-text">View Live Project</span>
                     <img src={githubIcon} alt="GitHub" className="link-icon" />
                   </a>
+                ) : (
+                  <p>Live site not available</p>
                 )}
               </div>
             </div>
 
-            {project.moreDetails && (
-              <div className="project-more-details-section">
-                <div className="more-details-grid">
-                  {project.moreDetails.map((detail, index) => (
-                    <div key={index} className="detail-card">
-                      <div className="detail-image-container">
-                        <img 
-                          src={detail.detailsImg} 
-                          alt={detail.detailsTitle} 
-                          className="detail-image"
-                        />
-                      </div>
-                      <div className="detail-content">
-                        <h4 className="detail-title">{detail.detailsTitle}</h4>
-                        <p className="detail-description">{detail.detailsDescription}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+            {project.process && (
+              <div className="project-process-section">
+                <h3>Process</h3>
+                {project.process.map((paragraph, index) => (
+                  <p key={index} className="process-text">{paragraph}</p>
+                ))}
               </div>
             )}
-
           </div>
         </div>
       </div>
-    </div>
   );
 }
 

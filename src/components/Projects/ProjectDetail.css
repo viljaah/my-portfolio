@@ -1,8 +1,3 @@
-.project-detail {
-  min-height: 100vh;
-  padding-top: 1rem;
-}
-
 .project-detail-container {
   max-width: 110rem;
   margin: 0 auto;
@@ -14,9 +9,9 @@
   align-items: center;
   color: var(--primary);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   transition: 0.3s ease;
   padding-bottom: 1rem;
   padding-left: 0.5rem;
@@ -36,7 +31,7 @@
 .project-detail-content {
   background: var(--light);
   border-radius: 1.2rem;
-  padding: 3rem 5rem 3rem 5rem;
+  padding: 4rem 0;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -44,6 +39,8 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  width: 60%;
+  margin: 0 auto;
 }
 
 .project-detail-title {
@@ -71,27 +68,14 @@
   font-size: 1.125rem;
   line-height: 1.7;
   color: var(--gray);
-  max-width: 70ch;
+  max-width: 80ch;
 }
 
-.project-detail-image-container {
-  width: 70%;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  margin: 0 auto;
-}
 
-.project-detail-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
 
 .project-technologies-section h3,
 .project-contributors-section h3,
-.project-more-section h3 {
+.project-process-section h3 {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--dark);
@@ -102,7 +86,7 @@
 
 .project-technologies-section h3::after,
 .project-contributors-section h3::after,
-.project-more-section h3::after {
+.project-process-section h3::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -211,76 +195,87 @@
   filter: brightness(0) saturate(100%) invert(41%) sepia(84%) saturate(1026%) hue-rotate(347deg) brightness(102%) contrast(101%);
 }
 
-.project-more-section {
-  padding-top: 1rem;
-  /* border-top: 1px solid rgba(0, 0, 0, 0.1); */
+.project-process-section {
+  margin-top: 2rem;
 }
 
-.project-more-section p {
-  font-size: 1rem;
+.process-text {
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
   line-height: 1.7;
   color: var(--gray);
-}
-
-/* responsive */
-@media (max-width: 768px) {
-  .project-detail {
-    padding-top: 80px;
-  }
-  
-  .project-detail-container {
-    padding: 1.5rem;
-  }
-  
-  .project-detail-content {
-    padding: 2rem;
-  }
-  
-  .project-detail-title {
-    font-size: 2rem;
-  }
-  
-  .project-detail-description {
-    font-size: 1rem;
-  }
-  
-  .project-links {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 480px) {
-  .project-detail-container {
-    padding: 1rem;
-  }
-  
-  .project-detail-content {
-    padding: 1.5rem;
-    border-radius: 12px;
-  }
-  
-  .project-detail-title {
-    font-size: 1.75rem;
-  }
-  
-  .back-button {
-    font-size: 14px;
-    padding: 6px 12px;
-  }
-  
-  .technology-tag {
-    font-size: 0.85rem;
-    padding: 0.4rem 0.8rem;
-  }
+  max-width: 80ch;
 }
 
 
-/* More Details Section Styling */
-.project-more-details-section {
+
+
+.project-detail-image-container {
+  position: relative;
+  border-radius: 1.2rem;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-detail-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 0.5rem;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+}
+
+.indicator.active {
+  background: white;
+}
+
+/* Details Section Styling */
+/* .project-details-section {
   margin: 3rem 0;
 }
 
-.more-details-grid {
+.details-grid {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -293,10 +288,10 @@
   gap: 2rem;
   align-items: center;
   margin-bottom: 2rem;
-}
+} */
 
 /* Reverse layout for even cards (image right, text left) */
-.detail-card:nth-child(even) {
+/* .detail-card:nth-child(even) {
   flex-direction: row-reverse;
 }
 
@@ -334,4 +329,4 @@
   font-size: 1rem;
   font-weight: 300;
   max-width: 70ch;
-}
+} */
