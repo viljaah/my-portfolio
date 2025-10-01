@@ -1,7 +1,7 @@
 .about-section {
   width: 80%;
   margin: 0 auto;
-  padding: 70px 180px;
+  padding: 50px 0 30px 0;
   color: var(--dark);
   position: relative;
   scroll-margin-top: 6rem;
@@ -11,8 +11,6 @@
   align-items: center;
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
-  /* border-radius: 1.2rem;
-  margin-bottom: 30px; */
 }
 
 .about-title {
@@ -40,7 +38,8 @@
   font-size: 18px;
   line-height: 1.8;
   color: var(--gray);
-  max-width: 70ch;
+  max-width: 80ch;
+  margin-bottom: 1.5rem;
 }
 
 /* responsive */
@@ -67,6 +66,7 @@
 
 @media (max-width: 768px) {
   .about-section {
+    width: 90%;
     padding: 60px 30px;
   }
   

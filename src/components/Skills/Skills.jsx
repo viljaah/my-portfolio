@@ -34,24 +34,6 @@ function Skills() {
                 ]}
               />
             </div>
-            {/* <div className="skills-items">
-              <SkillsCard 
-                title="Frontend" 
-                itemNames={['React', 'Sass']}
-                item_images={[
-                  reactIcon, sassIcon
-                ]}
-              />
-            </div>
-            <div className="skills-items">
-              <SkillsCard 
-                title="Backend" 
-                itemNames={['Node.js', 'Express']}
-                item_images={[
-                  nodeIcon, expressIcon
-                ]}
-              />
-            </div> */}
             <div className="skills-items">
               <SkillsCard 
                 title="Frontend & Backend" 

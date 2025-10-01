@@ -6,7 +6,7 @@
   justify-content: center;
   overflow: hidden;
   z-index: -2;
-  animation: heroEnter 1.2s ease-out;
+  animation: heroEnter 2s ease-out;
 }
 
 .hero-content {
@@ -15,15 +15,12 @@
   max-width: 900px;
 }
 
-/* load inn, skal jeg ha med det? */
 @keyframes heroEnter {
   from {
     opacity: 0;
-    transform: translateY(40px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
@@ -91,58 +88,6 @@
   50%, 100% {
     visibility: visible;
   }
-}
-
-/* buttons */
-.hero-button,
-.hero-button-outline {
-  padding: 18px 40px;
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 50px;
-  transition: 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  display: inline-block;
-  margin: 10px;
-  cursor: pointer;
-  border: none;
-}
-
-/* project button */
-.hero-button {
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  color: var(--light);
-  box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
-}
-
-/* shine effect on hover */
-.hero-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-  transition: left 0.5s ease;
-}
-
-.hero-button:hover::before {
-  left: 100%;
-}
-
-/* contack button */
-.hero-button-outline {
-  background: transparent;
-  color: var(--light);
-  border: 2px solid rgba(255, 255, 255, 0.3);
-}
-
-.hero-button-outline:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: var(--primary);
-  box-shadow: 0 10px 30px rgba(255, 107, 53, 0.2);
 }
 
 /* image */
