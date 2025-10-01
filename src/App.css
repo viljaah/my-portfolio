@@ -29,7 +29,49 @@ body {
   --gray: #8A8A8A;
   --overlay: rgba(26, 26, 26, 0.7);
 
-  /* sizes */
-  --nav-height: 4.8rem;
-  --nav-scroll-height: 8.4rem;
+  /* navbar height for scroll to section */
+  --nav-height-desktop: 4.6rem;
+  --nav-height-mobile: 3.8rem;
+
+  /* spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 4rem;
+  
+  /* font sizes */
+  --font-xs: 0.75rem;
+  --font-sm: 0.875rem;
+  --font-base: 1rem;
+  --font-lg: 1.125rem;
+  --font-xl: 1.25rem;
+  --font-2xl: 1.5rem;
+  --font-3xl: 2rem;
+  --font-4xl: 2.5rem;
+  --font-5xl: 3rem;
+  
+  /* border radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.2rem;
+  --radius-full: 50%;
+  
+  /* line heights */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.6;
+  --line-height-loose: 1.8;
+  
+  /* transitions */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.4s ease;
+  
+  /* shadows */
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 25px rgba(255, 107, 53, 0.15);
+  --shadow-xl: 0 30px 60px rgba(0, 0, 0, 0.15);
 }

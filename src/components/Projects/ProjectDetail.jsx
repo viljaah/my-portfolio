@@ -69,7 +69,7 @@ function ProjectDetail() {
             </div>
             
             <div className="project-technologies-section">
-              <h3>Technologies Used</h3>
+              <h3 className="section-title">Technologies Used</h3>
               <ul className="project-detail-technologies">
                 {project.technologies.map((tech, index) => (
                   <li key={index} className="technology-tag">{tech}</li>
@@ -79,7 +79,7 @@ function ProjectDetail() {
 
             {project.contributors && (
               <div className="project-contributors-section">
-                <h3>Contributors</h3>
+                <h3 className="section-title">Contributors</h3>
                 <ul className="project-contributors">
                   {project.contributors.map((contributor, index) => (
                     <li key={index}>
@@ -94,7 +94,7 @@ function ProjectDetail() {
             )}
 
             <div className="project-links-section">
-              <h3>Github code and live site</h3>
+              <h3 className="section-title">Github code and live site</h3>
               <div className="project-links">
                 {project.githubUrl && (
                   <a 
@@ -123,7 +123,7 @@ function ProjectDetail() {
 
             {project.process && (
               <div className="project-process-section">
-                <h3>Process</h3>
+                <h3 className="section-title">Process</h3>
                 {project.process.map((paragraph, index) => (
                   <p key={index} className="process-text">{paragraph}</p>
                 ))}

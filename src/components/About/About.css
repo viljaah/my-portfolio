@@ -1,7 +1,7 @@
 .about-section {
   width: 80%;
   margin: 0 auto;
-  padding: 50px 0 30px 0;
+  padding: 3.125rem 0 1.875rem 0;
   color: var(--dark);
   position: relative;
   scroll-margin-top: 6rem;
@@ -9,43 +9,41 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-top-left-radius: 2rem;
-  border-top-right-radius: 2rem;
+  border-top-left-radius: var(--radius-lg);
+  border-top-right-radius: var(--radius-lg);
 }
 
 .about-title {
-  font-size: 48px;
+  font-size: var(--font-5xl);
   font-weight: 800;
-  margin-bottom: 30px;
-  line-height: 1.2;
+  margin-bottom: var(--spacing-md);
+  line-height: var(--line-height-tight);
   color: var(--dark);
   position: relative;
 }
 
-/* color line under title */
 .about-title::after {
   content: '';
   position: absolute;
-  bottom: -10px;
+  bottom: -0.625rem;
   left: 0;
-  width: 80px;
-  height: 4px;
+  width: 5rem;
+  height: 0.25rem;
   background: linear-gradient(90deg, var(--primary), var(--secondary));
-  border-radius: 2px;
+  border-radius: 0.125rem;
 }
 
 .about-section p {
-  font-size: 18px;
-  line-height: 1.8;
+  font-size: var(--font-lg);
+  line-height: var(--line-height-loose);
   color: var(--gray);
   max-width: 80ch;
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--spacing-md);
 }
 
-/* responsive */
 @media (max-width: 1200px) {
   .about-section {
-    padding: 80px 40px;
+    padding: 5rem 2.5rem;
   }
   
   .about-title {
@@ -67,24 +65,30 @@
 @media (max-width: 768px) {
   .about-section {
     width: 90%;
-    padding: 60px 30px;
+    padding: 3.75rem var(--spacing-md);
   }
   
   .about-title {
-    font-size: 36px;
+    font-size: var(--font-4xl);
   }
   
   .about-section p {
-    font-size: 16px;
+    font-size: var(--font-base);
+    line-height: var(--line-height-relaxed);
   }
 }
 
 @media (max-width: 480px) {
   .about-section {
-    padding: 40px 20px;
+    width: 95%;
+    padding: 2.5rem var(--spacing-sm);
   }
   
   .about-title {
-    font-size: 32px;
+    font-size: var(--font-3xl);
+  }
+
+  .about-section p {
+    font-size: var(--font-sm);
   }
 }
