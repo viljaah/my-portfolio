@@ -7,6 +7,11 @@ import githubIcon from "../../assets/icons/github-icon.svg";
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isAvailable, setIsAvailable] = useState(true);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,6 +24,17 @@ function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (isMobileMenuOpen && !e.target.closest('.nav-menu') && !e.target.closest('.hamburger')) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [isMobileMenuOpen]);
 
   const scrollToSection = (e, targetId) => {
     e.preventDefault();
@@ -40,20 +56,25 @@ function Navbar() {
             </span>
           </div>
         </div>
-        <ul className="nav-menu">
-          {/* <li className="nav-item">
-            <a
-              href="#about"
-              className="nav-link"
-              onClick={(e) => scrollToSection(e, "about")}>
-              About
-            </a>
-          </li> */}
+
+        <div 
+          className={`hamburger ${isMobileMenuOpen ? 'open' : ''}`}
+          onClick={toggleMobileMenu}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul className={`nav-menu ${isMobileMenuOpen ? 'open' : ''}`}>
           <li className="nav-item">
             <a
               href="#skills"
               className="nav-link"
-              onClick={(e) => scrollToSection(e, "skills")}>
+              onClick={(e) => {
+                scrollToSection(e, "skills");
+                setIsMobileMenuOpen(false);
+              }}>
               Technologies
             </a>
           </li>
@@ -61,41 +82,33 @@ function Navbar() {
             <a
               href="#projects"
               className="nav-link"
-              onClick={(e) => scrollToSection(e, "projects")}>
+              onClick={(e) => {
+                scrollToSection(e, "projects");
+                setIsMobileMenuOpen(false);
+              }}>
               Projects
             </a>
           </li>
-          {/* <li className="nav-item">
-            <a
-              href="#contact"
-              className="nav-link"
-              onClick={(e) => scrollToSection(e, "contact")}>
-              Contact
-            </a>
-          </li> */}
           <li className="nav-item">
             <a
               href="https://drive.google.com/file/d/1UqVOUyagGbeYU7E8eK0LMOZpdceGINM2/view?usp=sharing"
               target="_blank"
-              className="nav-link">
+              className="nav-link"
+              onClick={() => setIsMobileMenuOpen(false)}>
               CV
             </a>
           </li>
 
           <li className="nav-separator">|</li>
 
-          <li className="nav-item">
-            <a href="mailto:vilja.a.hen@gmail.com" className="nav-icon-link">
+          <li className="nav-item icon-item">
+            <a href="mailto:vilja.a.hen@gmail.com" className="nav-icon-link" onClick={() => setIsMobileMenuOpen(false)}>
                 <img src={emailIcon} alt="E-mail icon" className="nav-icon" />
             </a>
-          </li>
-          <li className="nav-item">
-            <a href="https://www.linkedin.com/in/vilja-alexandra-henriksen-131274359/" target="_blank" className="nav-icon-link">
+            <a href="https://www.linkedin.com/in/vilja-alexandra-henriksen-131274359/" target="_blank" className="nav-icon-link" onClick={() => setIsMobileMenuOpen(false)}>
                 <img src={linkedinIcon} alt="LinkedIn icon" className="nav-icon" />
             </a>
-          </li>
-          <li className="nav-item">
-            <a href="https://github.com/viljaah" target="_blank" className="nav-icon-link">
+            <a href="https://github.com/viljaah" target="_blank" className="nav-icon-link" onClick={() => setIsMobileMenuOpen(false)}>
                 <img src={githubIcon} alt="Github icon" className="nav-icon" />
             </a>
           </li>
