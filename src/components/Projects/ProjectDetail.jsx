@@ -96,15 +96,17 @@ function ProjectDetail() {
             <div className="project-links-section">
               <h3 className="section-title">Github code and live site</h3>
               <div className="project-links">
-                {project.githubUrl && (
+                {project.githubUrl ? (
                   <a 
                     href={project.githubUrl} 
                     target="_blank" 
                     className="project-link-item"
                   >
                     <span className="link-text">View on GitHub</span>
-                    <img src={globeIcon} alt="Live site" className="link-icon" />
+                    <img src={githubIcon} alt="Live site" className="link-icon" />
                   </a>
+                ) : (
+                  <p>Github not available</p>
                 )}
                 {project.liveUrl ? (
                   <a 
@@ -113,7 +115,7 @@ function ProjectDetail() {
                     className="project-link-item"
                   >
                     <span className="link-text">View Live Project</span>
-                    <img src={githubIcon} alt="GitHub" className="link-icon" />
+                    <img src={globeIcon} alt="GitHub" className="link-icon" />
                   </a>
                 ) : (
                   <p>Live site not available</p>
