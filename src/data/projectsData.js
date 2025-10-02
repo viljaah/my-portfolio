@@ -4,7 +4,7 @@ export const projectsData = [
     projectUrl: "twitter-remake",
     title: "Twitter Remake",
     description: "This is a description of the Twitter Remake project.",
-    technologies: ['React', 'Express', 'Python', 'PostgreSQL'],
+    technologies: ['React', 'Express', 'Python', 'PostgreSQL', 'Docker'],
     imageUrl: "/images/twitter-homepage.png",
     images: [
       "/images/twitter-log-in.png",
@@ -16,15 +16,15 @@ export const projectsData = [
       "/images/twitter-fastapi.png",
       "/images/twitter-fastapi2.png"
     ],
-    fullDescription: "Detailed description of Twitter Remake project. More information about the project, challenges faced, solutions implemented, and results achieved.",
+    fullDescription: "Detailed description of Twitter Remake project.",
     // contributors: [
     //   { name: "Modesta", link: "https://github.com/modestat" }
     // ],
     githubUrl: "https://github.com/viljaah/twitter-remake-2",
     process: [
-      "More info about the project, more images maybe, the process, phases, etc... Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
-      "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-      "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+      "More info about the project...",
+      "More info about the project...",
+      "More info about the project..."
     ], 
   },
   {
@@ -32,7 +32,7 @@ export const projectsData = [
     projectUrl: "quiz-platform",
     title: "Quiz Platform",
     description: "This is a description of the Quiz Platform project.",
-    technologies: ['React', 'Express', 'MongoDB'],
+    technologies: ['React', 'Express', 'MongoDB', 'Docker'],
     imageUrl: "/images/quiz-log-in.png",
     images: [
       "/images/quiz-log-in.png",
@@ -42,34 +42,35 @@ export const projectsData = [
       "/images/quiz-participant.png",
       "/images/quiz-results.png"
     ],
-    fullDescription: "Detailed description of Quiz Platform project. More information about the project, challenges faced, solutions implemented, and results achieved.",
+    fullDescription: "Detailed description of Quiz Platform project.",
     liveUrl: "https://group6.sustainability.it.ntnu.no/",
     githubUrl: "https://github.com/miasannstud/webproject",
     process: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
-      "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-      "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+      "More info about the project...",
+      "More info about the project...",
+      "More info about the project..."
     ],    
   },
   {
     id: 3,
-    projectUrl: "unknown-project",
-    title: "Unknown Project",
-    description: "This is a description of the Unknown Project.",
-    technologies: ['React', 'Express', 'PostgreSQL'],
-    imageUrl: "/images/duck-toller.webp",
+    projectUrl: "accessibility-project",
+    title: "Accessibility Project",
+    description: "This is a description of the Accessibility Project.",
+    technologies: ['HTML', 'CSS'],
+    imageUrl: "/images/accessibility-homepage.png",
     images: [
-      "/images/duck-toller.webp",
-      "/images/duck-toller.webp"
+      "/images/accessibility-homepage.png",
+      "/images/accessibility-table.png",
+      "/images/accessibility-form.png"
     ],
-    fullDescription: "Detailed description of Unknown Project. More information about the project, challenges faced, solutions implemented, and results achieved.",
-    liveUrl: "https://example.com/jakt-cocker-platform",
-    githubUrl: "https://github.com/yourusername/jakt-cocker-platform",
+    fullDescription: "Detailed description of Accessibility Project.",
+    liveUrl: "https://viljaah.github.io/accessibility-project/",
+    githubUrl: "https://github.com/viljaah/accessibility-project",
     process: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
-      "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-      "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
-    ],
+      "More info about the project...",
+      "More info about the project...",
+      "More info about the project..."
+    ], 
     // details: [
     //   { 
     //     detailsTitle: "Ideation Phase",

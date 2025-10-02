@@ -9,11 +9,6 @@
   src: url("./assets/fonts/roboto-mono.ttf");
 }
 
-@font-face {
-  font-family: "Rubik";
-  src: url("./assets/fonts/rubik.ttf");
-}
-
 body {
   background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
   font-family: "Roboto Mono", monospace;
