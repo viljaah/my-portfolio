@@ -55,7 +55,7 @@
 }
 
 .project-card-description {
-  color: var(--gray);
+  color: var(--dark);
   font-size: 0.95rem;
   line-height: var(--line-height-normal);
   margin-bottom: 1.25rem;

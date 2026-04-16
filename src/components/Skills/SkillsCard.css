@@ -6,7 +6,7 @@
   height: 100%;
 }
 
-.skills-title h4 {
+.skills-title h3 {
   font-size: var(--font-2xl);
   font-weight: 700;
   margin-bottom: var(--spacing-md);
@@ -16,7 +16,7 @@
   padding-bottom: 0.9375rem;
 }
 
-.skills-title h4::after {
+.skills-title h3::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -93,7 +93,7 @@
     padding: var(--spacing-sm) var(--spacing-lg);
   }
   
-  .skills-title h4 {
+  .skills-title h3 {
     font-size: var(--font-xl);
   }
 
@@ -121,7 +121,7 @@
     padding: var(--spacing-sm);
   }
 
-  .skills-title h4 {
+  .skills-title h3 {
     font-size: var(--font-lg);
     margin-bottom: var(--spacing-sm);
   }

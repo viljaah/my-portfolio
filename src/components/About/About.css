@@ -36,7 +36,7 @@
 .about-section p {
   font-size: var(--font-lg);
   line-height: var(--line-height-loose);
-  color: var(--gray);
+  color: var(--dark);
   max-width: 80ch;
   margin-bottom: var(--spacing-md);
 }
