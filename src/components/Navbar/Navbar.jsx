@@ -89,15 +89,6 @@ function Navbar() {
               Projects
             </a>
           </li>
-          <li className="nav-item">
-            <a
-              href="https://drive.google.com/file/d/1UqVOUyagGbeYU7E8eK0LMOZpdceGINM2/view?usp=sharing"
-              target="_blank"
-              className="nav-link"
-              onClick={() => setIsMobileMenuOpen(false)}>
-              CV
-            </a>
-          </li>
 
           <li className="nav-separator">|</li>
 
