@@ -6,7 +6,7 @@ function ProjectCard({ imageUrl, title, description, technologies, projectUrl })
     <Link to={`/${projectUrl}`} className="project-card-link">
       <div className="project-card">
         {imageUrl && (
-          <img src={imageUrl} alt={`${title} image`} className="project-image" />
+          <img src={imageUrl} alt={`${title} schreenshot from one page of the project showing different UI elements`} className="project-image" />
         )}
         <div className="project-card-content">
           <h3 className="project-card-title">{title}</h3>
