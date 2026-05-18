@@ -39,31 +39,31 @@ function ProjectDetail() {
             <h1 className="project-detail-title">{project.title}</h1>
             <p className="project-detail-description">{project.fullDescription}</p>
 
-            <div className="project-detail-image-container">
+            <div className="carousel-wrapper">
+              <div className="project-detail-image-container">
+                <img
+                  src={images[currentImageIndex]}
+                  alt={`${project.title} screenshot ${currentImageIndex + 1}`}
+                  className="project-detail-image"
+                />
+              </div>
               {images.length > 1 && (
-                <button onClick={prevImage} className="carousel-button prev-button">
-                  ‹
-                </button>
-              )}
-              <img 
-                src={images[currentImageIndex]} 
-                alt={`${project.title} screenshot ${currentImageIndex + 1}`} 
-                className="project-detail-image" 
-              />
-              {images.length > 1 && (
-                <button onClick={nextImage} className="carousel-button next-button">
-                  ›
-                </button>
-              )}
-              {images.length > 1 && (
-                <div className="carousel-indicators">
-                  {images.map((_, index) => (
-                    <button
-                      key={index}
-                      className={`indicator ${index === currentImageIndex ? 'active' : ''}`}
-                      onClick={() => setCurrentImageIndex(index)}
-                    />
-                  ))}
+                <div className="carousel-controls">
+                  <button onClick={prevImage} className="carousel-button prev-button">
+                    ‹
+                  </button>
+                  <div className="carousel-indicators">
+                    {images.map((_, index) => (
+                      <button
+                        key={index}
+                        className={`indicator ${index === currentImageIndex ? 'active' : ''}`}
+                        onClick={() => setCurrentImageIndex(index)}
+                      />
+                    ))}
+                  </div>
+                  <button onClick={nextImage} className="carousel-button next-button">
+                    ›
+                  </button>
                 </div>
               )}
             </div>
