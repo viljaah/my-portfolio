@@ -7,6 +7,7 @@
   display: flex;
   flex-direction: column;
   border: 0.125rem solid transparent;
+  width: 100%;
 }
 
 .project-card:hover {
@@ -18,7 +19,8 @@
 .project-card-link {
   text-decoration: none;
   color: inherit;
-  display: block;
+  display: flex;
+  height: 100%;
 }
 
 .project-image {
@@ -31,6 +33,7 @@
   padding: var(--spacing-md);
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 .project-card-title {
@@ -59,6 +62,7 @@
   font-size: 0.95rem;
   line-height: var(--line-height-normal);
   margin-bottom: 1.25rem;
+  flex: 1;
 }
 
 .project-technologies {
